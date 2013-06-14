@@ -19,4 +19,8 @@ public class Meter {
         return length+"m";
     }
 
+    public Centimeter convertToCentimeter() {
+        int theValue = length * 100;
+        return new Centimeter(theValue);  //To change body of created methods use File | Settings | File Templates.
+    }
 }
