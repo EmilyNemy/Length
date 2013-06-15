@@ -1,5 +1,7 @@
 package com.muk.src;
 
+import co.muk.src.Millimeter;
+
 /**
  * Created with IntelliJ IDEA.
  * User: emily
@@ -40,5 +42,10 @@ public class Meter {
     @Override
     public int hashCode() {
         return length;
+    }
+
+    public Millimeter toMillimeter() {
+        return new Millimeter(length*1000);
+
     }
 }

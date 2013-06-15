@@ -39,7 +39,6 @@ public class Centimeter {
     }
 
     public Meter convertToMeter() {
-        int value=(length/100);
-        return new Meter(value);  //To change body of created methods use File | Settings | File Templates.
+        return new Meter(length/100);  //To change body of created methods use File | Settings | File Templates.
     }
 }

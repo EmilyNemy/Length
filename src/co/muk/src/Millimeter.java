@@ -1,5 +1,7 @@
 package co.muk.src;
 
+import com.muk.src.Meter;
+
 /**
  * Created with IntelliJ IDEA.
  * User: emily
@@ -16,5 +18,26 @@ public class Millimeter {
 
     public String toString(){
         return length +"mm";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Millimeter that = (Millimeter) o;
+
+        if (length != that.length) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return length;
+    }
+
+    public Meter toMeter() {
+        return new Meter(length/1000) ;  //To change body of created methods use File | Settings | File Templates.
     }
 }
