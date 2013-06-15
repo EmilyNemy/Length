@@ -19,10 +19,19 @@ public class ConvertTest {
     @Test
     public void shouldConvertMeterToCentimeter(){
         Meter meter = new Meter(1);
+        Centimeter centimeter = new Centimeter(100);
 
-        Centimeter cm = meter.convertToCentimeter();
+        assertThat(meter.convertToCentimeter(), is(centimeter))  ;
 
-        assertThat(cm.toString(), is("100cm"))  ;
+
+    }
+    @Test
+    public void shouldConvertCentimterToMeter(){
+        Meter meter = new Meter(1);
+        Centimeter centimeter = new Centimeter(100);
+
+        assertThat(centimeter.convertToMeter(), is(meter))  ;
+
     }
 
 

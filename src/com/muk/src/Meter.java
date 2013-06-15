@@ -19,8 +19,26 @@ public class Meter {
         return length+"m";
     }
 
+
     public Centimeter convertToCentimeter() {
-        int theValue = length * 100;
-        return new Centimeter(theValue);  //To change body of created methods use File | Settings | File Templates.
+        int result = length*100;
+        return new Centimeter(result);  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Meter meter = (Meter) o;
+
+        if (length != meter.length) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return length;
     }
 }

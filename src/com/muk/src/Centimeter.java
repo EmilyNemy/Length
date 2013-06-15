@@ -12,12 +12,34 @@ import org.testng.annotations.Test;
 public class Centimeter {
     private int length;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Centimeter that = (Centimeter) o;
+
+        if (length != that.length) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return length;
+    }
+
     public Centimeter(int length) {
         this.length = length;
+
     }
 
     public String toString(){
         return length + "cm";
     }
 
+    public Meter convertToMeter() {
+        int value=(length/100);
+        return new Meter(value);  //To change body of created methods use File | Settings | File Templates.
+    }
 }
