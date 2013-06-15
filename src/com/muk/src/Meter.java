@@ -48,4 +48,12 @@ public class Meter {
         return new Millimeter(length*1000);
 
     }
+
+    public Meter add(Meter meter) {
+        return new Meter(length + meter.length);
+    }
+
+    public Meter subtract(Meter meter) {
+        return new Meter(length - meter.length);
+    }
 }

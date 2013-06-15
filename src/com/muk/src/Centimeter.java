@@ -1,5 +1,6 @@
 package com.muk.src;
 
+import co.muk.src.Millimeter;
 import org.testng.annotations.Test;
 
 /**
@@ -40,5 +41,9 @@ public class Centimeter {
 
     public Meter convertToMeter() {
         return new Meter(length/100);  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public Millimeter toMillimeter() {
+        return new Millimeter(length*10);  //To change body of created methods use File | Settings | File Templates.
     }
 }

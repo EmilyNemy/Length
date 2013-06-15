@@ -1,5 +1,6 @@
 package co.muk.src;
 
+import com.muk.src.Centimeter;
 import com.muk.src.Meter;
 
 /**
@@ -39,5 +40,9 @@ public class Millimeter {
 
     public Meter toMeter() {
         return new Meter(length/1000) ;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public Centimeter toCentimeter() {
+        return new Centimeter(length/10);  //To change body of created methods use File | Settings | File Templates.
     }
 }
