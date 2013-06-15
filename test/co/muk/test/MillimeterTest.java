@@ -1,6 +1,6 @@
 package co.muk.test;
 
-import co.muk.src.Millimeter;
+import com.muk.src.Millimeter;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

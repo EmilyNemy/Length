@@ -1,8 +1,5 @@
 package com.muk.src;
 
-import co.muk.src.Millimeter;
-import org.testng.annotations.Test;
-
 /**
  * Created with IntelliJ IDEA.
  * User: emily
@@ -45,5 +42,13 @@ public class Centimeter {
 
     public Millimeter toMillimeter() {
         return new Millimeter(length*10);  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public Centimeter addCentimeter(Centimeter centimeter) {
+        return new Centimeter(length + centimeter.length);
+    }
+
+    public Centimeter subtractCentimeter(Centimeter centimeter) {
+        return new Centimeter(length - centimeter.length);  //To change body of created methods use File | Settings | File Templates.
     }
 }

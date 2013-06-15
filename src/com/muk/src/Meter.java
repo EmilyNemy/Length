@@ -1,7 +1,5 @@
 package com.muk.src;
 
-import co.muk.src.Millimeter;
-
 /**
  * Created with IntelliJ IDEA.
  * User: emily

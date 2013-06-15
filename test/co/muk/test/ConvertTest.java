@@ -1,9 +1,8 @@
 package co.muk.test;
 
-import co.muk.src.Millimeter;
+import com.muk.src.Millimeter;
 import com.muk.src.Centimeter;
 import com.muk.src.Meter;
-import org.hamcrest.Matcher;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -51,7 +50,7 @@ public class ConvertTest {
 
         assertThat(millimeter.toMeter(),is(meter));
     }
-    
+
     @Test
     public void convertCentimeterToMillimeter(){
         Millimeter millimeter = new Millimeter(10);
@@ -67,7 +66,7 @@ public class ConvertTest {
         assertThat(millimeter.toCentimeter(),is(centimeter));
     }
     @Test
-    public void calculateLength(){
+    public void calculateLengthInMeters(){
         Meter meter1 = new Meter(1);
         Meter meter2 = new Meter(3);
         Meter meter3 = new Meter(4);
@@ -75,4 +74,16 @@ public class ConvertTest {
 
         assertThat(meterResult, is(new Meter(2)));
     }
+    @Test
+    public void calculateLengthInCentimeters(){
+        Centimeter centimeter1 = new Centimeter(7);
+        Centimeter centimeter2 = new Centimeter(3);
+        Centimeter centimeter3 = new Centimeter(2);
+
+        Centimeter centimeterResult = (centimeter1.addCentimeter(centimeter2)).subtractCentimeter(centimeter3);
+
+        assertThat(centimeterResult, is(new Centimeter(8)));
+
+    }
+    @
 }
